@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C6BFBF"
+    tools:context=".kolg.quiz.HomeFragment">
+
+    <ImageView
+        android:layout_marginTop="@dimen/margin_iv_artut"
+        android:id="@+id/ivArtut"
+        android:layout_width="90dp"
+        android:layout_height="105dp"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/todo"
+        android:layout_marginBottom="@dimen/margin_iv_artut"
+        android:src="@drawable/artut" />
+
+    <TextView
+        android:id="@+id/tv_qa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivArtut"
+        android:layout_marginTop="20dp"
+        android:layout_toStartOf="@id/tvAmount"
+        android:text="@string/questions_amount" />
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/tvAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivArtut"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="12dp"
+        android:textColor="@color/black"
+        android:text="@string/ten" />
+
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="@dimen/width_seekbar"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvAmount"
+        android:layout_gravity="center"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="5dp"
+        android:max="50"
+        android:min="5"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:progressTint="@android:color/holo_purple"
+        android:thumbTint="@android:color/holo_purple"
+        tools:targetApi="o" />
+
+    <TextView
+        android:id="@+id/tv_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/category"
+        android:layout_below="@id/seekBar"
+        style="@style/TvCategory"
+        />
+
+
+    <Spinner
+        android:id="@+id/spinnerCategory"
+        style="@style/forSpinner"
+        android:layout_height="30dp"
+        android:layout_below="@id/tv_category"
+        android:entries="@array/category_list"
+
+        />
+
+    <TextView
+        android:id="@+id/tv_difficult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/difficulty"
+        android:layout_below="@id/spinnerCategory"
+        style="@style/TvCategory"
+        />
+
+    <Spinner
+        android:id="@+id/spinnerDifficulty"
+        style="@style/forSpinner"
+        android:layout_height="30dp"
+        android:layout_below="@id/tv_difficult"
+        android:entries="@array/difficulty_list"
+
+        />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="48dp"
+        android:text="@string/start"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/spinnerDifficulty"
+        android:layout_marginTop="@dimen/left_margin_category"
+
+        />
+
+
+
+</RelativeLayout>
