@@ -1,0 +1,13 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="width_seekbar">270dp</dimen>
+    <dimen name="margin_q_amount">10dp</dimen>
+    <dimen name="right_margin_seekBar">23dp</dimen>
+    <dimen name="left_margin_category">67dp</dimen>
+    <dimen name="spinner_right_dimen">65dp</dimen>
+    <dimen name="margin_iv_artut">30dp</dimen>
+
+
+</resources>

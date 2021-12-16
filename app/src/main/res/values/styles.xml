@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<style name="tv_result_style">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_gravity">center</item>
+    <item name="android:fontFamily">@font/quiz_font</item>
+    <item name="android:textColor">@color/black</item>
+    <item name="android:textSize">17sp</item>
+    <item name="android:textStyle">bold</item>
+</style>
+
+<style name="tv_sub_result_style">
+<item name="android:layout_width">wrap_content</item>
+<item name="android:layout_height">wrap_content</item>
+<item name="android:fontFamily">@font/quiz_font</item>
+<item name="android:textSize">12sp</item>
+</style>
+
+
+</resources>
