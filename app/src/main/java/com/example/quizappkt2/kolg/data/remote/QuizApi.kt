@@ -1,6 +1,6 @@
-package com.example.quizappkt2.kolg.remote
+package com.example.quizappkt2.kolg.data.remote
 
-import com.example.quizappkt2.kolg.remote.models.QuestionsDto
+import com.example.quizappkt2.kolg.data.remote.models.QuestionsDto
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query

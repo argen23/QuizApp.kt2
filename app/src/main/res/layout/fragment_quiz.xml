@@ -64,6 +64,7 @@
         android:fontFamily="@font/quiz_font"
         android:textAlignment="center"
         android:textColor="#1A051D"
+        android:textStyle="bold"
         android:textSize="20sp" />
 
 
@@ -78,7 +79,7 @@
         <Button
             android:id="@+id/btn_1"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:gravity="center"
             android:layout_marginHorizontal="50dp"
             android:layout_marginBottom="6dp"
@@ -88,7 +89,7 @@
         <Button
             android:id="@+id/btn_2"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:gravity="center"
             android:layout_marginHorizontal="50dp"
             android:layout_marginBottom="6dp"
@@ -98,7 +99,7 @@
         <Button
             android:id="@+id/btn_3"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:gravity="center"
             android:layout_marginHorizontal="50dp"
             android:layout_marginBottom="6dp"
@@ -108,10 +109,10 @@
         <Button
             android:id="@+id/btn_4"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:gravity="center"
             android:layout_marginHorizontal="50dp"
-            android:textColor="#6979F8" />
+            android:textColor="@color/white" />
 
     </LinearLayout>
 
@@ -123,24 +124,28 @@
         android:orientation="vertical"
         android:visibility="gone">
 
-        <TextView
+        <Button
             android:id="@+id/btn_1_tf"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_marginHorizontal="50dp"
             android:layout_marginBottom="34dp"
             android:text="@string/afeg"
+            android:background="@drawable/round"
+            android:textSize="30sp"
             android:textColor="#6979F8" />
 
-        <TextView
+        <Button
             android:id="@+id/btn_2_tf"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_marginHorizontal="50dp"
             android:text="@string/falses"
-            android:textColor="#6979F8" />
+            android:textSize="30sp"
+            android:background="@drawable/round"
+            android:textColor="#D50000" />
     </LinearLayout>
 
     <LinearLayout

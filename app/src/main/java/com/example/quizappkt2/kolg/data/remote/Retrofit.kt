@@ -1,4 +1,4 @@
-package com.example.quizappkt2.kolg.remote
+package com.example.quizappkt2.kolg.data.remote
 
 import com.example.quizappkt2.BuildConfig
 import okhttp3.OkHttpClient

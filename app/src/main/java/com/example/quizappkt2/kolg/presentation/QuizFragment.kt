@@ -9,12 +9,11 @@ import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.quizappkt2.R
 import com.example.quizappkt2.databinding.FragmentQuizBinding
 import com.example.quizappkt2.kolg.BaseFragment
+import com.example.quizappkt2.kolg.domain.model.History
 import com.example.quizappkt2.kolg.domain.model.Questions
 import com.example.quizappkt2.kolg.domain.model.Result
 import com.example.quizappkt2.kolg.uitls.extensions.loadImage
 import com.example.quizappkt2.kolg.uitls.extensions.visibility
-import com.example.quizappkt2.kolg.remote.models.QuestionsDto
-import com.example.quizappkt2.kolg.remote.models.ResultDto
 import com.example.quizappkt2.kolg.uitls.Constant
 import com.google.gson.Gson
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -29,6 +28,8 @@ class QuizFragment : BaseFragment<FragmentQuizBinding>() {
     private var size = 0
     private  val binding: FragmentQuizBinding by viewBinding()
     private val viewModel: QuizViewModel by viewModel()
+    private lateinit var history: History
+
 
     override fun bind(): FragmentQuizBinding {
         return FragmentQuizBinding.inflate(layoutInflater)
@@ -70,8 +71,18 @@ class QuizFragment : BaseFragment<FragmentQuizBinding>() {
                 requireArguments().getString(Constant.DATA_KEY),
                 Questions::class.java
             ).results
+
+            history = History(
+                0,
+                requireArguments().getString(Constant.CATEGORY_KEY),
+                0,
+                requireArguments().getString(Constant.DIFFICULTY_KEY),
+                results?.size.toString(),
+                System.currentTimeMillis()
+            )
             startGame()
         }
+
     }
 
 
@@ -82,8 +93,16 @@ class QuizFragment : BaseFragment<FragmentQuizBinding>() {
         if (size > pos) {
             setData(pos)
         } else {
-            openResultFragment()
+            saveData()
         }
+    }
+
+    private fun saveData() {
+        history.correctAnswers = viewModel.getCorrectAns()
+        viewModel.insert(history)
+
+        openResultFragment()
+
     }
 
     private fun setData(pos: Int) {
@@ -122,6 +141,9 @@ class QuizFragment : BaseFragment<FragmentQuizBinding>() {
 
     private fun openResultFragment() {
         val bundle = Bundle()
+
+        bundle.putString(Constant.RESULT_KEY, Gson().toJson(history))
+
         findNavController().popBackStack(R.id.navigation_quiz, true)
         findNavController().navigate(R.id.resultFragment, bundle)
     }

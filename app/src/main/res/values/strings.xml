@@ -42,5 +42,15 @@
     <string name="correct_answers">correct Answers</string>
     <string name="result">Result</string>
     <string name="finish">Finish</string>
+    <string name="history">History</string>
+    <string name="empty">Empty</string>
+    <string name="date">21 january 2022 19:48</string>
+    <string name="category_">Category: %1$s</string>
+    <string name="difficulty_">Difficulty: %1$s</string>
+    <string name="correct_answers_">Correct answers: %1$s/%2$s</string>
+    <string name="date_format">dd mmm yyyy kk:mm</string>
+    <string name="are_you_sure">Вы уверены ,что хотите удалить?</string>
+
+
 
 </resources>

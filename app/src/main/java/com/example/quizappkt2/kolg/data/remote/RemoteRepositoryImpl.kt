@@ -1,11 +1,11 @@
-package com.example.quizappkt2.kolg.remote
+package com.example.quizappkt2.kolg.data.remote
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.liveData
 import com.example.quizappkt2.kolg.domain.model.Questions
 import com.example.quizappkt2.kolg.domain.QuestionsMapper
 import com.example.quizappkt2.kolg.domain.RemoteRepository
-import com.example.quizappkt2.kolg.remote.models.QuestionsDto
+import com.example.quizappkt2.kolg.data.remote.models.QuestionsDto
 import com.example.quizappkt2.kolg.network.Resource
 import kotlinx.coroutines.Dispatchers
 import retrofit2.Response

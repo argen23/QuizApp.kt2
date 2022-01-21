@@ -1,4 +1,4 @@
-package com.example.quizappkt2.kolg.remote.models
+package com.example.quizappkt2.kolg.data.remote.models
 
 data class ResultDto(
     val category: String?,

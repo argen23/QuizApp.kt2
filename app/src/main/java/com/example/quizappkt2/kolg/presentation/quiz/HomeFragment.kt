@@ -13,7 +13,6 @@ import com.example.quizappkt2.databinding.FragmentHomeBinding
 import com.example.quizappkt2.kolg.BaseFragment
 import com.example.quizappkt2.kolg.domain.model.Questions
 import com.example.quizappkt2.kolg.uitls.extensions.visibility
-import com.example.quizappkt2.kolg.remote.models.QuestionsDto
 import com.example.quizappkt2.kolg.network.Status
 import com.example.quizappkt2.kolg.uitls.Constant
 import com.google.gson.Gson

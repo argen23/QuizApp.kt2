@@ -3,17 +3,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#C6BFBF"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#6F5197"
     tools:context=".kolg.presentation.quiz.HomeFragment">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_quiz"
+        android:text="Quiz"
+        android:textColor="@color/teal_for_txt"
+        android:textSize="50sp"
+        android:layout_margin="20dp"
+        />
+
     <ImageView
-        android:layout_marginTop="@dimen/margin_iv_artut"
         android:id="@+id/ivArtut"
         android:layout_width="90dp"
         android:layout_height="105dp"
         android:layout_centerHorizontal="true"
-        android:contentDescription="@string/todo"
+        android:layout_marginTop="@dimen/margin_iv_artut"
         android:layout_marginBottom="@dimen/margin_iv_artut"
+        android:contentDescription="@string/todo"
+        android:layout_below="@+id/tv_quiz"
         android:src="@drawable/artut" />
 
     <TextView
@@ -23,18 +35,19 @@
         android:layout_below="@id/ivArtut"
         android:layout_marginTop="20dp"
         android:layout_toStartOf="@id/tvAmount"
-        android:text="@string/questions_amount" />
+        android:text="@string/questions_amount"
+        android:textColor="@color/teal_for_txt" />
 
     <TextView
-        android:layout_marginTop="20dp"
         android:id="@+id/tvAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/ivArtut"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="12dp"
-        android:textColor="@color/black"
-        android:text="@string/ten" />
+        android:layout_marginTop="20dp"
+        android:text="@string/ten"
+        android:textColor="@color/teal_for_txt" />
 
 
     <SeekBar
@@ -45,28 +58,28 @@
         android:layout_gravity="center"
         android:layout_marginStart="60dp"
         android:layout_marginTop="5dp"
-        android:max="50"
+        android:max="20"
         android:min="1"
-        android:orientation="vertical"
         android:padding="10dp"
-        android:progressTint="@android:color/holo_purple"
-        android:thumbTint="@android:color/holo_purple"
+        app:thumbColor="@android:color/holo_purple"
+        app:trackColor="@android:color/holo_purple"
+        app:trackColorInactive="@color/white"
+
         tools:targetApi="o" />
 
     <TextView
         android:id="@+id/tv_category"
+        style="@style/TvCategory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/category"
         android:layout_below="@id/seekBar"
-        style="@style/TvCategory"
-        />
+        android:text="@string/category" />
 
 
     <Spinner
         android:id="@+id/spinnerCategory"
-        style="@style/forSpinner"
-        android:layout_height="30dp"
+        style="@style/forSpinners"
+        android:layout_height="36dp"
         android:layout_below="@id/tv_category"
         android:entries="@array/category_list"
 
@@ -74,43 +87,39 @@
 
     <TextView
         android:id="@+id/tv_difficult"
+        style="@style/TvCategory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/difficulty"
         android:layout_below="@id/spinnerCategory"
-        style="@style/TvCategory"
-        />
+        android:text="@string/difficulty" />
 
     <Spinner
         android:id="@+id/spinnerDifficulty"
-        style="@style/forSpinner"
-        android:layout_height="30dp"
+        style="@style/forSpinners"
+        android:layout_height="36dp"
         android:layout_below="@id/tv_difficult"
         android:entries="@array/difficulty_list"
 
         />
 
     <ProgressBar
+        android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/progressBar"
-        android:indeterminate="true"
-        android:visibility="gone"
         android:layout_above="@id/btnStart"
         android:layout_below="@id/spinnerDifficulty"
-        />
+        android:indeterminate="true"
+        android:visibility="gone" />
 
     <Button
         android:id="@+id/btnStart"
         android:layout_width="200dp"
         android:layout_height="48dp"
-        android:text="@string/start"
-        android:layout_centerHorizontal="true"
         android:layout_below="@id/spinnerDifficulty"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/left_margin_category"
-
-        />
-
+        android:background="@drawable/round"
+        android:text="@string/start" />
 
 
 </RelativeLayout>

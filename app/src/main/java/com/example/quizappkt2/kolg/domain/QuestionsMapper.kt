@@ -2,8 +2,8 @@ package com.example.quizappkt2.kolg.domain
 
 import com.example.quizappkt2.kolg.domain.model.Questions
 import com.example.quizappkt2.kolg.domain.model.Result
-import com.example.quizappkt2.kolg.remote.models.QuestionsDto
-import com.example.quizappkt2.kolg.remote.models.ResultDto
+import com.example.quizappkt2.kolg.data.remote.models.QuestionsDto
+import com.example.quizappkt2.kolg.data.remote.models.ResultDto
 
 
 class QuestionsMapper {
@@ -24,4 +24,5 @@ class QuestionsMapper {
     private fun mapListResultDto(list: List<ResultDto>?) = list?.map {
         mapResultDto(it)
     }
+
 }
