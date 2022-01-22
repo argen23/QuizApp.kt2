@@ -9,8 +9,9 @@ import com.example.quizappkt2.kolg.data.remote.models.QuestionsDto
 import com.example.quizappkt2.kolg.network.Resource
 import kotlinx.coroutines.Dispatchers
 import retrofit2.Response
+import javax.inject.Inject
 
-class RemoteRepositoryImpl(private val quizApi: QuizApi , private val questionsMapper: QuestionsMapper) : RemoteRepository {
+class RemoteRepositoryImpl @Inject constructor(private val quizApi: QuizApi , private val questionsMapper: QuestionsMapper) : RemoteRepository {
 
     override fun getQuestions(
         amount: String,

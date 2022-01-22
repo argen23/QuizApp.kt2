@@ -4,9 +4,10 @@ import com.example.quizappkt2.kolg.domain.model.Questions
 import com.example.quizappkt2.kolg.domain.model.Result
 import com.example.quizappkt2.kolg.data.remote.models.QuestionsDto
 import com.example.quizappkt2.kolg.data.remote.models.ResultDto
+import javax.inject.Inject
 
 
-class QuestionsMapper {
+class QuestionsMapper @Inject constructor() {
 
     fun mapDtoToDomain(questionsDto: QuestionsDto?): Questions {
         return Questions(questionsDto?.response_code, mapListResultDto(questionsDto?.results))

@@ -10,7 +10,10 @@ import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.quizappkt2.R
 import com.example.quizappkt2.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import dagger.hilt.android.AndroidEntryPoint
 
+
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     private val  binding: ActivityMainBinding by viewBinding()

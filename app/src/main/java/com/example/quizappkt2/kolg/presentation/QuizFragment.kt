@@ -4,6 +4,7 @@ package com.example.quizappkt2.kolg.presentation
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.quizappkt2.R
@@ -16,10 +17,11 @@ import com.example.quizappkt2.kolg.uitls.extensions.loadImage
 import com.example.quizappkt2.kolg.uitls.extensions.visibility
 import com.example.quizappkt2.kolg.uitls.Constant
 import com.google.gson.Gson
+import dagger.hilt.android.AndroidEntryPoint
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import java.util.*
 
-
+@AndroidEntryPoint
 class QuizFragment : BaseFragment<FragmentQuizBinding>() {
 
     private var results: List<Result>? = null
@@ -27,7 +29,7 @@ class QuizFragment : BaseFragment<FragmentQuizBinding>() {
     private lateinit var corrAns: String
     private var size = 0
     private  val binding: FragmentQuizBinding by viewBinding()
-    private val viewModel: QuizViewModel by viewModel()
+    private val viewModel: QuizViewModel by viewModels()
     private lateinit var history: History
 
 
@@ -116,7 +118,7 @@ class QuizFragment : BaseFragment<FragmentQuizBinding>() {
         val position = pos + 1
         binding.progressIndicator.progress = position
 
-        "$pos/$size".also { binding.tvProgress.text = it }
+        "$position/$size".also { binding.tvProgress.text = it }
 
         if (result?.type == "multiple") {
             binding.multipleLayout.visibility(true)

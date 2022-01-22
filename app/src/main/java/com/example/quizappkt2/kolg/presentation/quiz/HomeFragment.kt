@@ -6,6 +6,7 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.SeekBar
 import android.widget.Toast
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.quizappkt2.R
@@ -16,8 +17,10 @@ import com.example.quizappkt2.kolg.uitls.extensions.visibility
 import com.example.quizappkt2.kolg.network.Status
 import com.example.quizappkt2.kolg.uitls.Constant
 import com.google.gson.Gson
+import dagger.hilt.android.AndroidEntryPoint
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
+@AndroidEntryPoint
 class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
     private val binding: FragmentHomeBinding by viewBinding()
@@ -28,7 +31,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     private var categoryName: String = "All"
     private lateinit var options1: ArrayList<String>
     private lateinit var options2: ArrayList<String>
-    private val viewModel: HomeViewModel by viewModel()
+    private val viewModel: HomeViewModel by viewModels()
 
     override fun bind(): FragmentHomeBinding {
         return FragmentHomeBinding.inflate(layoutInflater)

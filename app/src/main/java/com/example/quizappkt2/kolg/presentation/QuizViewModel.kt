@@ -5,9 +5,13 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.quizappkt2.kolg.data.local.LocalRepository
 import com.example.quizappkt2.kolg.domain.model.History
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class QuizViewModel (private val localRepository: LocalRepository) : ViewModel() {
+
+@HiltViewModel
+class QuizViewModel @Inject constructor (private val localRepository: LocalRepository) : ViewModel() {
 
     private var pos = 0
     private var ans = 0

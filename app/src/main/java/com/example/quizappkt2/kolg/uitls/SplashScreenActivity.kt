@@ -7,8 +7,11 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.quizappkt2.R
 import com.example.quizappkt2.kolg.presentation.MainActivity
+import dagger.hilt.android.AndroidEntryPoint
+
 
 @SuppressLint("CustomSplashScreen")
+@AndroidEntryPoint
 class SplashScreenActivity : AppCompatActivity() {
 
     lateinit var iv : ImageView
@@ -20,9 +23,9 @@ class SplashScreenActivity : AppCompatActivity() {
 
         iv.alpha = 0f
         iv.animate().alpha(1f).withEndAction{
+            overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
             val i  = Intent(this , MainActivity::class.java)
             startActivity(i)
-            overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out)
             finish()
         }
     }

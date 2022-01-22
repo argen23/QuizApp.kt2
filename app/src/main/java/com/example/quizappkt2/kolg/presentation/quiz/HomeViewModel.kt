@@ -6,8 +6,12 @@ import androidx.lifecycle.ViewModel
 import com.example.quizappkt2.kolg.domain.use_case.GetQuestionsUseCase
 import com.example.quizappkt2.kolg.domain.model.Questions
 import com.example.quizappkt2.kolg.network.Resource
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class HomeViewModel(private val getQuestionsUseCase: GetQuestionsUseCase) : ViewModel() {
+
+@HiltViewModel
+class HomeViewModel  @Inject constructor (private val getQuestionsUseCase: GetQuestionsUseCase) : ViewModel() {
 
     val progressBar = MutableLiveData<Boolean>()
 

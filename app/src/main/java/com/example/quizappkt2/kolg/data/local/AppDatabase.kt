@@ -7,8 +7,6 @@ import com.example.quizappkt2.kolg.domain.model.History
 
 @Database(entities = [History::class], version = 1)
 
-
     abstract class AppDatabase : RoomDatabase() {
         abstract fun historyDao() : HistoryDao
-
     }

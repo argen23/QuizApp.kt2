@@ -11,7 +11,7 @@ interface QuizApi {
     suspend fun getQuestions(@Query("amount") amount: String):
             Response<QuestionsDto>
 
-    @GET("(/api.php")
+    @GET("/api.php")
     suspend fun getQuestionsCategory(
         @Query("amount") amount: String,
         @Query("category") category: String

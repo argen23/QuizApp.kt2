@@ -15,8 +15,9 @@ import com.example.quizappkt2.kolg.domain.model.History
 import com.example.quizappkt2.kolg.uitls.Constant
 import com.example.quizappkt2.kolg.uitls.extensions.visibility
 import com.google.gson.Gson
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class ResultFragment : BaseFragment<FragmentResultBinding>() {
 
     lateinit var history: History

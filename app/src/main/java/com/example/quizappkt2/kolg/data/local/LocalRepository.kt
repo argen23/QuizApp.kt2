@@ -1,8 +1,10 @@
 package com.example.quizappkt2.kolg.data.local
 
 import com.example.quizappkt2.kolg.domain.model.History
+import javax.inject.Inject
 
-class LocalRepository(private val dao : HistoryDao) {
+
+class LocalRepository @Inject constructor(private val dao : HistoryDao) {
 
     suspend fun getAllHistory(): List<History> {
         return dao.getAllHistory()

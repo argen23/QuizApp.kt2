@@ -10,8 +10,9 @@ import com.example.quizappkt2.databinding.ItemHistoryBinding
 import com.example.quizappkt2.kolg.domain.model.History
 import java.text.SimpleDateFormat
 import java.util.*
+import javax.inject.Inject
 
-class HistoryAdapter(private val list: List<History>, private val listener:
+class HistoryAdapter (private val list: List<History>, private val listener:
     (history: History) -> Unit) : RecyclerView.Adapter<HistoryAdapter.HistoryViewHolder>() {
 
 
